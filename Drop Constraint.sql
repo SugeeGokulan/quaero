@@ -1,0 +1,22 @@
+
+ALTER TABLE File_track_tbl drop constraint fk_File_track_tbl_fail_code
+
+ALTER TABLE student drop constraint fk_student_file
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_id
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_file
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_ctype01
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_ctype02
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_ctype03
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_ctype04
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_special01
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_special02
+
+ALTER TABLE student_enrollment drop constraint fk_student_enrollment_special03
