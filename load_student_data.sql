@@ -41,6 +41,7 @@ BEGIN
 	left join student b on a.sequence = b.sequence and a.Studentpin=b.Studentpin
 	where b.sequence is null
 
+	insert into student_enrollment
 	select 
 	   b.student_id
       ,a.file_id
