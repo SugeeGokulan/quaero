@@ -1,5 +1,5 @@
 
-create database Demo;
+--create database Demo;
 
 drop table fail_code_table
 
@@ -83,19 +83,19 @@ drop table student
 create table student(
 student_id bigint primary key identity(1000,1),
 file_id int,
-sequence varchar(8),
-Studentpin varchar(7), 
-firstname varchar(40), 
-middleinitial varchar(1), 
-lastname varchar(40), 
-address varchar(64), 
-city varchar(30), 
-state varchar(2), 
-zipcode varchar(5), 
-email varchar(75), 
-phone varchar(10), 
+sequence varchar(300),
+Studentpin varchar(300), 
+firstname varchar(300), 
+middleinitial varchar(300), 
+lastname varchar(300), 
+address varchar(300), 
+city varchar(300), 
+state varchar(300), 
+zipcode varchar(300), 
+email varchar(300), 
+phone varchar(300), 
 birthdate date, 
-gender varchar(1),
+gender varchar(30),
 create_date datetime,
 update_date datetime,
 constraint fk_student_file foreign key (file_id) references File_track_tbl (file_id)
@@ -106,9 +106,9 @@ drop table student_enrollment
 create table student_enrollment(
 student_id bigint,
 file_id int,
-Highschoolname varchar(60), 
+Highschoolname varchar(300), 
 graduationyear int, 
-gpa varchar(2), 
+gpa varchar(30), 
 ctype01 int, 
 ctype02 int, 
 ctype03 int, 
@@ -129,6 +129,7 @@ constraint fk_student_enrollment_special02 foreign key (special02) references sp
 constraint fk_student_enrollment_special03 foreign key (special03) references specialized_college_preference (special_id)
 );
 
+drop table [stage_student]
 CREATE TABLE [stage_student] (
     [file_id] int,
     [datasource] varchar(300),
@@ -270,6 +271,7 @@ CREATE TABLE [stage_student] (
     [userdef06] varchar(300)
 )
 
+drop table [stage_student_history]
 CREATE TABLE [stage_student_history] (
     [file_id] int,
     [datasource] varchar(300),
